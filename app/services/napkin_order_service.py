@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 # Gemini Client
 # ==========================
 
-client = genai.Client(os.getenv("GOOGLE_API_KEY"))
+client = genai.Client( api_key=os.getenv("GOOGLE_API_KEY"))
 
 MODEL_NAME = "gemini-2.5-flash-lite"
 MODEL_TIMEOUT = 30.0
