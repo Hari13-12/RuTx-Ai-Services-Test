@@ -13,7 +13,6 @@ router = APIRouter()
 AUTH_USERNAME = os.getenv("AUTH_USERNAME")
 AUTH_PASSWORD = os.getenv("AUTH_PASSWORD")
 
-
 @router.post("/auth_token")
 async def auth_token(request: LoginRequest):
     logger = logging.getLogger(__name__)
