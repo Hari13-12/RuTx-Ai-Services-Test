@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: napkin-order-service
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: AUTH_PASSWORD
+        sync: false
+      - key: AUTH_USERNAME
+        sync: false
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        sync: false
+      - key: SECRET_KEY
+        sync: false
