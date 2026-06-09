@@ -33,7 +33,7 @@ async def create_access_token(username: str, expires_minutes: int = None) -> str
         str: JWT access token
     """
     if not expires_minutes:
-        expires_minutes = os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "30")
+        expires_minutes = "30"
 
     expire = datetime.now(timezone.utc) + timedelta(minutes=expires_minutes)
     payload = {
