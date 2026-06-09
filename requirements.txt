@@ -1,0 +1,6 @@
+fastapi[standard]
+pydantic_settings
+aiofiles
+python-multipart
+requests
+google-genai
